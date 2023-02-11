@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
-"""This is a Class Amenity for the Amenity"""
-
+"""Amenity Class.
+This module contains a class that inherits from the BaseModel class.
+"""
 from models.base_model import BaseModel
 
 
 class Amenity(BaseModel):
-    """Class Amenity inherits from BaseModel"""
+    """Defines the blueprint of the Amenity.
+    Attributes:
+        name: string - empty string
+    """
     name = ""

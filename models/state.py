@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
-""" This class is for the state name"""
-
+"""State Class.
+This module contains a class that inherits from the BaseModel class.
+"""
 from models.base_model import BaseModel
 
 
 class State(BaseModel):
-    """Inherits form BaseModel"""
+    """Defines the blueprint of the State.
+    Attributes:
+        name: string - empty string
+    """
     name = ""
