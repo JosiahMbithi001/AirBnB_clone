@@ -3,6 +3,8 @@
 This is the parent class (called BaseModel) used to take care\
 of the initialization of your future instances
 """
+
+import models
 import uuid
 from datetime import datetime
 
@@ -12,13 +14,23 @@ class BaseModel:
     BaseModel class: defines all common\
     attributes/methods for other classes
     """
-    def __init__(self):
+    def __init__(self, *args, **kwargs):
         """
         A class Constructor for the Id, created_at and updated_at
         """
-        self.id = str(uuid.uuid4())
-        self.created_at = datetime.now()
-        self.updated_at = datetime.now()
+
+        if not kwargs:
+            self.id = str(uuid.uuid4())
+            self.created_at = datetime.now()
+            self.updated_at = datetime.now()
+            models.storage.new(self)
+        else:
+            for key, value in kwargs.items():
+                if key != "__class__":
+                    if key in ["created_at", "updated_at"]:
+                        value = datetime.\
+                            strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
+                    setattr(self, key, value)
 
     def __str__(self):
         """
@@ -31,6 +43,7 @@ class BaseModel:
         Updates The Attribute: (update_at) , with the curent datetime
         """
         self.updated_at = datetime.now()
+        models.storage.save()
 
     def to_dict(self):
         """
