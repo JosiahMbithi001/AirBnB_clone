@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """This is the User's Class"""
 
-from base_model import BaseModel
+from model.base_model import BaseModel
 
 
 class (BaseModel):
