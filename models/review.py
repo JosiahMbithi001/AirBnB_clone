@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """A class for Review"""
 
-from model.base_model import BaseModel
+from models.base_model import BaseModel
 
 
 class Review(BaseModel):

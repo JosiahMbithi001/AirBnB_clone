@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """This is the User's Class"""
 
-from model.base_model import BaseModel
+from models.base_model import BaseModel
 
 
-class (BaseModel):
+class User(BaseModel):
     """
     Class user  which inherits from BaseModel
     """

@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 """This is the Place class"""
 
-from model.basemodel import BaseModel
+from models.base_model import BaseModel
 
 
 class Place(BaseModel):
-
     """
     Class Place inherits from BaseModel
     """
