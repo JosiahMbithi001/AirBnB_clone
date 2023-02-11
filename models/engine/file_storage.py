@@ -56,3 +56,16 @@ class FileStorage:
                 FileStorage.__objects = new_obj_dict
         except FileNotFoundError:
             pass
+
+    def delete(self, obj):
+        """Deletes objects from the JSON file"""
+        class_name = type(obj).__name__
+        obj_id = obj.id
+        key = f"{class_name}.{obj_id}"
+
+        if key in FileStorage.__objects:
+            del FileStorage.__objects[key]
+            self.save()
+            return True
+
+        return False
