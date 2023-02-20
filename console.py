@@ -87,6 +87,8 @@ class HBNBCommand(cmd.Cmd):
             # Key has format <className>.id
             key = tokensD[0] + '.' + tokensD[1]
             if key in dic:
+                print("We have Destroyed Class: {} of Instance Id: {}"\
+                .format(tokensD[0], tokensD[1]))
                 del dic[key]
                 models.storage.save()
             else:
@@ -111,6 +113,7 @@ class HBNBCommand(cmd.Cmd):
                 representation_Class = str(dic[key])
                 listI.append(representation_Class)
             # if listI:
+            print("This is the representation of all Classes")
             print(listI)
             return
 
