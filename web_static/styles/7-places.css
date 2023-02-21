@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* A Styling For The Places i.e My House, Tiny Home &nd A Suite */
 
 .places h1, h2{
@@ -16,4 +17,27 @@ article{
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
+=======
+.places {
+  text-align: center;
+}
+
+.places h1 {
+  font-size: 30px;
+  text-align: left;
+}
+
+article {
+  width: 390px;
+  border: 1px solid #FF5A5F;
+  border-radius: 4px;
+  padding: 20px;
+  margin: 20px;
+  display: inline-block;
+}
+
+article h2 {
+  font-size: 30px;
+  text-align: center;
+>>>>>>> 125c146de6b8a703774ccb6500d524fbc414abf2
 }

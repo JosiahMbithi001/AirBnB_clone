@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 footer{
     background-color : white;
     height: 60px;
@@ -10,3 +11,16 @@ footer{
     position: fixed;
 }
 
+=======
+footer {
+	background-color: white;
+	height: 60px;
+	width: 100%;
+	border-bottom: 1px solid #CCCCCC;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	bottom: 0;
+}
+>>>>>>> 125c146de6b8a703774ccb6500d524fbc414abf2

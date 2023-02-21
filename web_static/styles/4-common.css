@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body{
     margin: 0;
     padding: 0;
@@ -16,4 +17,17 @@ body{
     width: 100%;
     border: 1px solid #DDDDDD;
     border-radius: 4px;
+=======
+body {
+	margin: 0;
+	padding: 0;
+	font-color: #484848;
+	font-size: 14px;
+	font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.container {
+	max-width: 1000px;
+	margin: 30px auto;
+>>>>>>> 125c146de6b8a703774ccb6500d524fbc414abf2
 }
